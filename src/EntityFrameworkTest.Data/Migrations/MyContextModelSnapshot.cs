@@ -15,6 +15,13 @@ namespace EntityFrameworkTest.Data.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("EntityFrameworkTest.Data.Model", b =>
+                {
+                    b.Property<string>("Test");
+
+                    b.HasKey("Test");
+                });
         }
     }
 }

@@ -8,7 +8,7 @@ using EntityFrameworkTest.Data;
 namespace EntityFrameworkTest.Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20151227182831_Initial")]
+    [Migration("20151230210429_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -16,6 +16,13 @@ namespace EntityFrameworkTest.Data.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("EntityFrameworkTest.Data.Model", b =>
+                {
+                    b.Property<string>("Test");
+
+                    b.HasKey("Test");
+                });
         }
     }
 }

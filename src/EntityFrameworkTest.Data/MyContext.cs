@@ -5,7 +5,7 @@ namespace EntityFrameworkTest.Data
 {
     public class MyContext : DbContext
     {
-        public DbSet<Model> Models;
+        public DbSet<Model> Models { get; set; }
     }
 }
 
